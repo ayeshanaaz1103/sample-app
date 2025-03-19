@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ayeshanaazsampleapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ayeshanaazsampleapp
+  template:
+    metadata:
+      labels:
+        app: ayeshanaazsampleapp 
+    spec:
+      containers:
+        - name: ayeshanaazsampleapp 
+          image: adnanitdev.azurecr.io/ayeshanaazsampleapp
+          ports:
+          - containerPort: 80
